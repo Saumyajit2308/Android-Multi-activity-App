@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.h.customlist.AusWeb"
+    android:background="#616161">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#424242"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="545dp"
+        android:layout_marginBottom="5dp"
+        card_view:cardCornerRadius="20dp"
+        card_view:cardBackgroundColor="#689a92"
+        android:background="#689a92"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webViewAus"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#689a92">
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_x="129dp"
+                android:layout_y="218dp"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                 />
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView"
+                android:layout_centerVertical="true"
+                android:background="#689a92"
+                android:layout_centerHorizontal="true" >
+
+
+
+
+                <com.example.h.customlist.ZoomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/fetcheddataAus"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/button"
+                    android:background="#689a92"/>
+
+            </ScrollView>
+
+        </WebView>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Web Info on Australia"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView"
+        android:layout_below="@+id/toolbar3"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
